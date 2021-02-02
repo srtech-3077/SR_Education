@@ -15,6 +15,7 @@ body {
   width: 100%;
 }
 
+
 /* =========================================
 Stark Industries Logo
 ========================================= */
@@ -99,7 +100,6 @@ Log in form
   color: #888;
   display: block;
   font-family: "Cabin", helvetica, arial, sans-serif;
-  font-size: 13px;
   font-size: 1.3rem;
   height: 40px;
   margin: 20px auto 10px;
@@ -118,7 +118,7 @@ Log in form
   outline: none;
 }
 .stark-login input:invalid {
-  border: 2px solid red;
+  border: 3px solid red;
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.2), inset 0 0 5px rgba(255, 0, 0, 0.1),
     0 2px 0 #000;
 }
@@ -134,7 +134,7 @@ Log in form
   color: #fff;
   display: block;
   font-family: "Cabin", helvetica, arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   height: 40px;
   line-height: 40px;
@@ -142,7 +142,7 @@ Log in form
   padding: 0;
   position: relative;
   text-shadow: 0 -1px 0 #000;
-  width: 400px;
+  width: 350px;
   transition: 1s all;
 }
 .stark-login button:hover,
@@ -163,49 +163,49 @@ Log in form
 /* =========================================
 Spinner
 ========================================= */
-#circle1 {
-  animation: circle1 4s linear infinite, circle-entry 6s ease-in-out;
-  background: #000;
-  border-radius: 50%;
-  border: 10px solid #00a4a2;
-  box-shadow: 0 0 0 2px black, 0 0 0 6px #00fffc;
-  height: 500px;
-  width: 500px;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  margin-left: -250px;
-  overflow: hidden;
-  opacity: 0.4;
-  z-index: -3;
-}
+  #circle1 {
+    animation: circle1 4s linear infinite, circle-entry 6s ease-in-out;
+    background: #000;
+    border-radius: 50%;
+    border: 10px solid #00a4a2;
+    box-shadow: 0 0 0 2px black, 0 0 0 6px #00fffc;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -250px;
+    overflow: hidden;
+    opacity: 0.4;
+    z-index: -3;
+  }
 
-#inner-cirlce1 {
-  background: #000;
-  border-radius: 50%;
-  border: 36px solid #00fffc;
-  height: 460px;
-  width: 460px;
-  margin: 10px;
-}
-#inner-cirlce1:before {
-  content: " ";
-  width: 240px;
-  height: 480px;
-  background: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#inner-cirlce1:after {
-  content: " ";
-  width: 480px;
-  height: 240px;
-  background: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  #inner-cirlce1 {
+    background: #000;
+    border-radius: 50%;
+    border: 36px solid #00fffc;
+    height: 460px;
+    width: 460px;
+    margin: 10px;
+  }
+  #inner-cirlce1:before {
+    content: " ";
+    width: 240px;
+    height: 480px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #inner-cirlce1:after {
+    content: " ";
+    width: 480px;
+    height: 240px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
 /* =========================================
 Hexagon Mesh
@@ -341,3 +341,153 @@ Animation Keyframes
     transform: rotate(360deg);
   }
 }
+
+
+
+/* Media Query*/
+
+@media only screen and (max-width: 600px) {
+  
+  
+/* =========================================
+Stark Industries Logo
+========================================= */
+#logo {
+  animation: logo-entry 4s ease-in;
+  width: 180px;
+  z-index: 30;
+}
+
+h1 {
+  animation: text-glow 2s ease-out infinite alternate;
+  font-family: "Ubuntu", sans-serif;
+  color: #00a4a2;
+  font-size: 30px;
+
+}
+
+h1:before {
+
+  border-left: 280px solid transparent;
+  border-bottom: 10px solid #00a4a2;
+  right: -50px;
+  top: -15px;
+}
+h1:after {
+  animation: after-glow 2s ease-out infinite alternate;
+  border-left: 100px solid transparent;
+  border-top: 16px solid #00a4a2;
+  content: " ";
+  height: 0;
+  position: absolute;
+  right: -72px;
+  top: 20px;
+  transform: rotate(-47deg);
+  width: 0;
+}
+
+
+
+.stark-login form {
+  height: 195px;
+  margin: 180px auto 0;
+  position: relative;
+  z-index: 4;
+  width: 325px;
+}
+
+.stark-login input {
+  font-size: 15px;
+  height: 34px;
+  margin: 16px auto 7px;
+  padding: 0 8px;
+  text-shadow: 0 -1px 0 #000;
+  width: 250px;
+}
+
+.stark-login button {
+  
+  font-size: 15px;
+  font-weight: 400;
+  height: 30px;
+  line-height: 35px;
+  margin: 20px auto;
+  padding: 0;
+  text-shadow: 0 -1px 0 #000;
+  width: 290px;
+  transition: 1s all;
+}
+
+
+
+
+
+
+/* =========================================
+Spinner
+========================================= */
+  #circle1 {
+    animation: circle1 4s linear infinite, circle-entry 6s ease-in-out;
+    background: #000;
+    border-radius: 50%;
+    border: 10px solid #00a4a2;
+    box-shadow: 0 0 0 2px black, 0 0 0 6px #00fffc;
+    height: 340px;
+    width: 340px;
+    position: absolute;
+    top: 100px;
+    left: 71%;
+    margin-left: -249px;
+    overflow: hidden;
+    opacity: 0.4;
+    z-index: -3;
+}
+
+  #inner-cirlce1 {
+    background: #000;
+    border-radius: 50%;
+    border: 15px solid #00fffc;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+  }
+  #inner-cirlce1:before {
+    content: " ";
+    width: 120px;
+    height: 360px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #inner-cirlce1:after {
+    content: " ";
+    width: 360px;
+    height: 120px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+  /* =========================================
+Hexagon Mesh
+========================================= */
+.hexagons {
+  animation: logo-entry 4s ease-in;
+  color: #000;
+  font-size: 45px;
+  letter-spacing: -0.1em;
+  line-height: 0.8;
+  position: absolute;
+  text-shadow: 0 0 6px #00fffc;
+  top: 327px;
+  width:100%;
+  transform: perspective(358px) rotateX(28deg) scale(0.9);
+  z-index: -3;
+}
+
+}
+
+
