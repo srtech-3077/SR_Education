@@ -490,12 +490,14 @@ select {
 }
 
 #submit {
-    background: #ff6801;
-    color: #fff;
+    background: #f8f8f8;
+    color: #999;
+    
 }
 
 #submit:hover {
-    background-color: #cd5300;
+    background: #ff6801;
+    color: #fff;
 }
 
 @media screen and (max-width: 992px) {
