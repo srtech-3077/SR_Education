@@ -207,7 +207,7 @@
                     <img src="img/signup-img.jpg" alt="">
                 </div>
                 <div class="signup-form">
-                    <form action="/SR_EDUCATION-MAIN/contact.php" method="POST" class="register-form"
+                    <form action="/contact.php" method="POST" class="register-form"
                         id="register-form">
                         <h2 class="r">Student Registration Form</h2>
                         <div class="form-row">
