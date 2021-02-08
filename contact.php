@@ -1,0 +1,433 @@
+<?php
+
+        include "db_connect.php";
+
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+            $name = $_POST["name"];
+            $fname= $_POST["father_name"]; 
+            $add= $_POST["address"];
+            $gen= $_POST["gender"];
+            $state= $_POST["state"];
+            $city=$_POST["city"];
+            $dob= $_POST["birth_date"];
+            $pin= $_POST["pincode"];
+            $course= $_POST["course"];
+            $email= $_POST["email"];
+           
+
+
+        
+            $sql = "INSERT INTO `srg` (`name`, `fname`, `address`, `gender`, `state`, `city`, `dob`, `pincode`, `cours`, `email`, `dt`) VALUES ('$name', '$fname', '$add', '$gen', '$state', '$city', '$dob', '$pin', '$course', '$email', current_timestamp())";
+            $result = mysqli_query($conn, $sql);
+    
+            if($result){
+
+                    echo "Success";
+
+
+            }
+            else{
+
+
+                    echo "Error";
+
+            }
+
+        }      
+
+?>
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="shortcut icon" href="img/FavIcon.png" />
+
+    <meta name="author" content="codepixer" />
+
+    <meta name="description" content="" />
+
+    <meta name="keywords" content="" />
+
+    <meta charset="UTF-8" />
+
+    <title>Contact</title>
+
+    <style>
+    #success_message {
+        display: none;
+    }
+
+    .rainbow-text {
+        background: #ca4246;
+        background-color: #ca4246;
+        background: conic-gradient(#ca4246 20.666%, #e16541 16.666%, #e16541 33.333%, #f18f43 33.333%, #f18f43 50%, #8b9862 50%, #8b9862 66.666%, #476a98 66.666%, #476098 83.333%, #a7489b 83.333%);
+        /* Set thee background size and repeat properties. */
+        background-size: 20%;
+        background-repeat: repeat;
+        /* Use the text as a mask for the background. */
+        /* This will show the gradient as a text color rather than element bg. */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /* Animate the text when loading the element. */
+        /* This animates it on page load and when hovering out. */
+        animation: rainbow-text-animation-rev 0.8s ease forwards;
+        cursor: pointer;
+    }
+
+    .rainbow-text:hover {
+        animation: rainbow-text-animation 0.8s ease forwards;
+    }
+
+    @keyframes rainbow-text-animation {
+        0% {
+            background-size: 50%;
+            background-position: 0 0;
+        }
+
+        20% {
+            background-size: 57%;
+            background-position: 0 1em;
+        }
+
+        100% {
+            background-size: 250%;
+            background-position: -8em 1em;
+        }
+    }
+
+    /* Move the background and make it smaller. */
+    /* Animation shown when entering the page and after the hover animation. */
+
+    @keyframes rainbow-text-animation-rev {
+        0% {
+            background-size: 250%;
+            background-position: -9em 1em;
+        }
+
+        20% {
+            background-size: 57%;
+            background-position: 0 1em;
+        }
+
+        100% {
+            background-size: 57%;
+            background-position: 0 0;
+        }
+    }
+
+    h6.profile {
+        text-align: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 10px;
+    }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet" />
+    <link rel="stylesheet" href="themify-icons/0.1.2/css/themify-icons.css" />
+    <link rel="stylesheet" href="css/linearicons.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="Home.html"><img src="img/Asset 14x.png" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li class="menu-has-children">
+                            <a href="">Pages</a>
+                            <ul>
+                                <li><a href="elements.html">Elements</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-has-children">
+                            <a href="">Blog</a>
+                            <ul>
+                                <li><a href="blog-home.html">Blog Home</a></li>
+                                <li><a href="blog-single.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner-area relative">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="rainbow-text">
+                        Contact Us
+                    </h1>
+                    <p>In the history of modern astronomy, there is probably no one greater leap forward than the
+                        building and launch of the space telescope.</p>
+                    <div class="link-nav">
+                        <span class="box">
+                            <a href="Home.html">Home </a>
+                            <i class="lnr lnr-arrow-right"></i>
+                            <a href="contact.html">Contact Us</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rocket-img">
+            <img src="img/rocket.png" alt="" />
+        </div>
+    </section>
+
+    <!--  Register Form-->
+    <div class="main">
+        <div class="containersr">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="img/signup-img.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form action="/SR_EDUCATION-MAIN/contact.php" method="POST" class="register-form"
+                        id="register-form">
+                        <h2 class="r">Student Registration Form</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name :</label>
+                                <input type="text" name="name" id="name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="father_name">Father Name :</label>
+                                <input type="text" name="father_name" id="father_name" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" id="address" required />
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male"  value="male" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female" value="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+                                <label for="state">State :</label>
+                                <select id="listBox" name="state" onchange='selct_district(this.value)'></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <select name="city"  id='secondlist'></select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birth_date">DOB :</label>
+                            <input type="date" id="birth_date" name="birth_date" value="yy-mm-dd" min="1997-01-01"
+                                max="2022-12-31">
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode :</label>
+                            <input type="text" name="pincode" id="pincode" maxlength="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course :</label>
+                            <div class="form-select">
+                                <select name="course" id="course">
+                                   
+                                    <option value="computer">Computer Operator & Pragramming Assistant</option>
+                                    <option value="desiger">Designer</option>
+                                    <option value="marketing">Marketing</option>
+                                    <option value="AI">AI</option>
+                                    <option value="BE.IT">BE.IT</option>
+                                    <option value="Networking">Networking</option>
+                                    <option value="BCA" selected>BCA</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="IT">IT</option>
+                                    <option value="BCS.IT">BCS.IT</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email ID :</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+                        <div class="form-submit">
+                            <input type="Reset" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+    </script>
+    <!-- /.container -->
+
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Top Products</h4>
+                    <ul>
+                        <li><a href="#">Managed Website</a></li>
+                        <li><a href="#">Manage Reputation</a></li>
+                        <li><a href="#">Power Tools</a></li>
+                        <li><a href="#">Marketing Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Brand Assets</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 single-footer-widget">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Experts</a></li>
+                        <li><a href="#">Agencies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 single-footer-widget">
+                    <h4>Newsletter</h4>
+                    <p>You can trust us. we only send promo offers,</p>
+                    <div class="form-wrap" id="mc_embed_signup">
+                        <form target="_blank"
+                            action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                            method="get" class="form-inline">
+                            <input class="form-control" name="EMAIL" placeholder="Your Email Address"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+                                required="" type="email" />
+                            <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                            <div style="position: absolute; left: -5000px;">
+                                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
+                                    type="text" />
+                            </div>
+                            <div class="info"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12">
+                    Copyright &copy;
+
+                    <script>
+                    document.write(new Date().getFullYear());
+                    </script>
+                    All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                    <a href="https://colorlib.com" target="_blank">SR_Tech</a>
+                </p>
+                <div class="col-lg-4 col-md-12 footer-social">
+                    <a href="https://www.facebook.com/SunilYadav3077"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/SunilYa21031698"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/sr_yadav_001/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://chat.whatsapp.com/CwOGtWG7T6DCLB8zsrHyLj"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="back-top">
+        <a title="Go to Top" href="#"></a>
+    </div>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/state.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+    </script>
+
+
+</body>
+
+</html>
