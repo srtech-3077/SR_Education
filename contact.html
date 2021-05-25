@@ -105,6 +105,28 @@
     </head>
 
     <body>
+        <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirmation</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>You Registration to more information provide and PDF download For free bca information...
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="/" class="btn btn-danger">Cancel</a>
+                    <a href="http://sr-education.epizy.com/login.php" class="btn btn-success">Sing up!</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+        
         <header id="header">
             <div class="container">
                 <div class="row align-items-center justify-content-between d-flex">
@@ -250,7 +272,8 @@
                             </div>
                             <div class="form-submit">
                                 <input type="Reset" value="Reset All" class="submit" name="reset" id="reset" />
-                                <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                                 <a href="#myModal" data-toggle="modal">
+                                <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" /></a>
                             </div>
                         </form>
                     </div>
